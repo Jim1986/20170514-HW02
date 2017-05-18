@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+    <p>水仙花數尋找練習</p>
+    <button type"button" id="button">click</button>
+    <script type="text/javascript">
+        $("#button").click( function() {
+            for ( var i = 0; i < 1000; i++) {
+                x = i.toString().substr(0,1);
+                y = i.toString().substr(1,1);
+                z = i.toString().substr(2,1);
+                // console.log(x);
+                // console.log(y);
+                // console.log(z);
+                j = x*x*x + y*y*y + z*z*z;
+                // console.log(j);
+                if ( j == i) {
+                    $("#answer").append( i + "<br>");
+                }
+            }
+        })
+    </script>
+    <hr>
+    <p>Answer：</p>
+    <div id="answer"></div>
+</body>
+</html>
